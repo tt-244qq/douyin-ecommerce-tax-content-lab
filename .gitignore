@@ -20,6 +20,7 @@
 .cheat-cache/
 .cheat-hooks/
 .debug/
+node_modules/
 
 # ── Claude Code 本地配置（含机器相关路径 / 个人 permission）──
 .claude/
