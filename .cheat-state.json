@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.4",
+  "skill_version": "1.0.0",
+  "rubric_version": "v0",
+  "content_form": "tutorial-builder",
+  "typical_duration_seconds": 30,
+  "target_publish_cadence_days": 1,
+  "rubric_form_mismatch": true,
+  "benchmark_status": "pending",
+  "benchmark_name": null,
+  "benchmark_sample_count": 0,
+  "baseline_plays": null,
+  "calibration_samples": 0,
+  "data_collection": "manual",
+  "pool_status": "markdown",
+  "data_layer": "markdown",
+  "hooks_installed": false,
+  "enabled_trend_sources": [
+    "manual-paste"
+  ],
+  "enabled_perf_adapters": [],
+  "last_bump_at": null,
+  "last_bump_self_audited": false,
+  "last_published_at": null,
+  "last_published_file": null,
+  "last_retro_at": null,
+  "last_trends_run_at": null,
+  "last_trends_added_count": 0,
+  "last_prediction_self_scored": false,
+  "last_self_scored_at": null,
+  "consecutive_directional_errors": [],
+  "pending_retros": [],
+  "shoots": [],
+  "in_progress_session": {
+    "type": "prediction",
+    "file": "predictions/2026-07-06_c94c64246130_平台流水自查.md",
+    "video_folder": "videos/2026-07-06_c94c64246130_平台流水自查",
+    "started_at": "2026-07-06T23:15:26+08:00",
+    "rubric_version": "v0"
+  },
+  "initialized_at": "2026-07-06T23:02:46+08:00"
+}
