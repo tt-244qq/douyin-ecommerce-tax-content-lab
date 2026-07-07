@@ -1,13 +1,13 @@
 # 候选选题池
 
 > 本文件由 `cheat-recommend` 读取并排序，也可手动维护。
-> 当前项目只服务王禹喆的抖音电商财税获客短视频。
+> 当前项目只服务西安注册公司找峪诚的抖音电商财税获客短视频。
 
 ---
 
 ## 候选项
 
-### [tier1] 平台流水和报税收入对不上
+### [done] 平台流水和报税收入对不上
 
 - **id**: c94c64246130
 - **source**: pool:manual
@@ -16,12 +16,13 @@
 - **read_status**: deep_read
 - **script**: scripts/2026-07-06_c94c64246130_平台流水自查.md
 - **predictions_file**: predictions/2026-07-06_c94c64246130_平台流水自查.md
+- **published_at**: 2026-07-07T11:15:00+08:00
 - **composite (v0)**: 6.86 — ER=2 HP=5 QL=4 NA=4 AB=4 SR=3 SAT=2
 - **note**: 电商老板最强共性痛点之一，适合第一条发布；私信关键词“电商自查”。
 
 > 电商平台流水、收款账户、开票金额三者对不上，是当前电商财税合规里最容易引发咨询的风险点。
 
-### [tier1] 无票成本导致账面利润虚高
+### [done] 无票成本导致账面利润虚高
 
 - **id**: de75c1e8e74e
 - **source**: pool:manual
@@ -30,12 +31,13 @@
 - **read_status**: deep_read
 - **script**: scripts/2026-07-06_de75c1e8e74e_无票成本.md
 - **predictions_file**: predictions/2026-07-06_de75c1e8e74e_无票成本.md
+- **published_at**: 2026-07-07T15:16:00+08:00
 - **composite (v0)**: 7.43 — ER=4 HP=5 QL=4 NA=4 AB=4 SR=3 SAT=2
 - **note**: 适合利润薄、达人合作、无票采购商家；私信关键词“成本”。
 
 > 电商老板现实中利润很薄，但由于进货、达人、物流、人工等成本缺少合规凭证，账面利润被放大。
 
-### [tier2] 个体户还是公司主体选择
+### [done] 个体户还是公司主体选择
 
 - **id**: f9ed4c45e01c
 - **source**: pool:manual
@@ -44,6 +46,7 @@
 - **read_status**: deep_read
 - **script**: scripts/2026-07-06_f9ed4c45e01c_主体选择.md
 - **predictions_file**: predictions/2026-07-06_f9ed4c45e01c_主体选择.md
+- **published_at**: 2026-07-07T18:09:00+08:00
 - **composite (v0)**: 6.29 — ER=3 HP=4 QL=3 NA=4 AB=4 SR=2 SAT=2
 - **note**: 适合准备开店、刚起量人群；转化意向可能弱于前两条；私信关键词“主体”。
 
@@ -56,8 +59,8 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier1
 - **read_status**: rough_read
-- **script**: 待生成
-- **predictions_file**: 待预测
+- **script**: scripts/2026-07-07_35708346e2ba_涉税报送三数.md
+- **predictions_file**: predictions/2026-07-07_35708346e2ba_涉税报送三数.md
 - **composite (v0)**: 7.71 — ER=4 HP=5 QL=5 NA=4 AB=4 SR=3 SAT=2
 - **note**: 平台涉税信息报送是强政策背景，适合承接“电商老板现在必须自查”的焦虑。建议私信关键词“报送”。
 
@@ -70,8 +73,8 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier1
 - **read_status**: rough_read
-- **script**: 待生成
-- **predictions_file**: 待预测
+- **script**: scripts/2026-07-07_271ed3ef0f93_私户收款三种情况.md
+- **predictions_file**: predictions/2026-07-07_271ed3ef0f93_私户收款三种情况.md
 - **composite (v0)**: 7.29 — ER=4 HP=5 QL=4 NA=4 AB=4 SR=3 SAT=2
 - **note**: 私户收款是高频咨询点，但表达要避免绝对化。建议私信关键词“私户”。
 
@@ -140,8 +143,8 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier1
 - **read_status**: rough_read
-- **script**: 待生成
-- **predictions_file**: 待预测
+- **script**: scripts/2026-07-07_13f24bab427f_多店铺多主体.md
+- **predictions_file**: predictions/2026-07-07_13f24bab427f_多店铺多主体.md
 - **composite (v0)**: 7.57 — ER=4 HP=5 QL=4 NA=4 AB=5 SR=3 SAT=2
 - **note**: 和主体选择、平台流水自查能串成强系列，适合做“老板一看就知道自己有没有问题”。建议私信关键词“多店铺”。
 

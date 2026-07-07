@@ -21,22 +21,30 @@
   "enabled_perf_adapters": [],
   "last_bump_at": null,
   "last_bump_self_audited": false,
-  "last_published_at": null,
-  "last_published_file": null,
+  "last_published_at": "2026-07-07T18:09:00+08:00",
+  "last_published_file": "predictions/2026-07-06_f9ed4c45e01c_主体选择.md",
+  "last_published_video_folder": "videos/2026-07-06_f9ed4c45e01c_主体选择/",
+  "last_published_platform_id": "7659726033554513073",
   "last_retro_at": null,
   "last_trends_run_at": null,
   "last_trends_added_count": 0,
-  "last_prediction_self_scored": false,
-  "last_self_scored_at": null,
+  "last_prediction_self_scored": true,
+  "last_self_scored_at": "2026-07-07T21:32:34+08:00",
   "consecutive_directional_errors": [],
-  "pending_retros": [],
+  "pending_retros": [
+    "predictions/2026-07-06_c94c64246130_平台流水自查.md",
+    "predictions/2026-07-06_de75c1e8e74e_无票成本.md",
+    "predictions/2026-07-06_f9ed4c45e01c_主体选择.md"
+  ],
   "shoots": [],
   "in_progress_session": {
-    "type": "prediction",
-    "file": "predictions/2026-07-06_c94c64246130_平台流水自查.md",
-    "video_folder": "videos/2026-07-06_c94c64246130_平台流水自查",
-    "started_at": "2026-07-06T23:15:26+08:00",
-    "rubric_version": "v0"
+    "prediction_file": "predictions/2026-07-07_13f24bab427f_多店铺多主体.md",
+    "script_path": "scripts/2026-07-07_13f24bab427f_多店铺多主体.md",
+    "video_folder": "videos/2026-07-07_13f24bab427f_多店铺多主体/",
+    "started_at": "2026-07-07T21:32:34+08:00",
+    "rubric_version": "v0",
+    "basis": "pre_shoot",
+    "self_scored": true
   },
   "initialized_at": "2026-07-06T23:02:46+08:00"
 }
