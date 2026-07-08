@@ -74,6 +74,9 @@ T+3 天 → /cheat-retro videos/<日期>_<id>_<short>/
 > - score 是探索，无副作用，可反复跑
 > - predict 是承诺，写完文件 `## 预测 v1`（或 `## 预测 v2`）段被 hook 锁死
 
+> **隔离盲评要求**：
+> 后续正式预测必须优先用 `multi_agent_v1.spawn_agent` 创建隔离评分子代理。子代理只读 `rubric_notes.md` 和目标脚本，不读 `predictions/`、`videos/`、`.cheat-state.json`、`rubric-memo.md`、`audience.md`、`benchmark.md` 或任何历史表现。只有子代理工具不可用时，才允许 `main-claude-self` fallback，并必须显式标记。
+
 > **v2 重判触发**：cheat-shoot 检测拍摄稿与原 scripts 的 line-diff ≥30% 时自动调用 cheat-predict 写 `## 预测 v2` 段（append，不覆盖 v1）。详见 [shared-references/prediction-anatomy.md](../shared-references/prediction-anatomy.md) 的 v1/v2 段约定。
 
 ### ③ 发布登记
