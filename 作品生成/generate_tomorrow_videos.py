@@ -1,6 +1,7 @@
 import asyncio
 import math
 import os
+import re
 import subprocess
 from pathlib import Path
 
@@ -20,9 +21,27 @@ FONT_BOLD = MPT / "resource" / "fonts" / "MicrosoftYaHeiBold.ttc"
 FONT_NORMAL = MPT / "resource" / "fonts" / "MicrosoftYaHeiNormal.ttc"
 
 W, H = 1080, 1920
-FPS = 15
-OUTPUT_FPS = 30
+FPS = 60
+OUTPUT_FPS = 60
 BRAND = "西安注册公司找峪诚"
+
+
+def read_section(text, heading):
+    pattern = rf"^## {re.escape(heading)}\s*\n(.*?)(?=^## |\Z)"
+    match = re.search(pattern, text, flags=re.M | re.S)
+    return match.group(1).strip() if match else ""
+
+
+def load_script_config(item):
+    script_path = ROOT / item["script"]
+    text = script_path.read_text(encoding="utf-8")
+    voice = read_section(text, "口播稿")
+    keyword_match = re.search(r"私信关键词[：:]\s*([^\n]+)", text)
+    if voice:
+        item["voice"] = re.sub(r"\s+", "", voice)
+    if keyword_match:
+        item["keyword"] = keyword_match.group(1).strip(" `。")
+    return item
 
 
 def font(size, bold=True):
@@ -269,6 +288,7 @@ def render_video(item):
 ITEMS = [
     {
         "name": "涉税报送三数",
+        "script": "scripts/2026-07-07_35708346e2ba_涉税报送三数.md",
         "slug": "shetui_baosong_sanshu",
         "task": "wyz_20260708_shetui_baosong",
         "idx": "01",
@@ -276,11 +296,11 @@ ITEMS = [
         "keyword": "报送",
         "hook": "平台报送后，先查这 3 个数",
         "palette": {"base": (8, 20, 38), "accent": (37, 99, 235), "accent2": (239, 68, 68)},
-        "voice": "做电商的老板，别一听平台涉税信息报送就慌。你现在最该做的不是到处问严不严重，而是先把三个数核对清楚。第一个，平台后台的成交金额，看订单总额，不要只看到账的钱。第二个，退款和售后金额，有些老板只记收入，不记退款，最后收入被算高。第三个，账上已经申报的收入。平台数据、收款流水、申报收入，这三个数差太多，就一定要能解释。风险不一定来自少交多少税，而是数据对不上，账上说不清。今天先把近六个月的平台成交、退款售后、申报收入放在一张表里。先看差额，再补证据。需要自查表，私信我：报送。",
         "subs": ["平台报送后，先别慌", "先核对三个数", "平台成交金额", "退款和售后金额", "账上已申报收入", "三个数差太多，要能解释", "先看差额，再补证据", "私信：报送"],
     },
     {
         "name": "私户收款三种情况",
+        "script": "scripts/2026-07-07_271ed3ef0f93_私户收款三种情况.md",
         "slug": "sihu_shoukuan_sanzhong",
         "task": "wyz_20260708_sihu_shoukuan",
         "idx": "02",
@@ -288,11 +308,11 @@ ITEMS = [
         "keyword": "私户",
         "hook": "私户收款，先分类型再判断",
         "palette": {"base": (17, 24, 39), "accent": (245, 158, 11), "accent2": (220, 38, 38)},
-        "voice": "很多电商老板一听私户收款，就问我，是不是一定有问题。别先下结论，先分清三种情况。第一种，货款长期进老板个人卡，这种风险最大，因为平台订单、发货记录、收款账户很容易对上。第二种，公司临时周转，老板先垫钱，后面再还，这种要留借款、还款和用途说明，不能混成一锅粥。第三种，员工、亲戚朋友临时代收，这种更要谨慎，因为钱是谁的，货是谁卖的，税该谁申报，很容易说不清。私户收款最怕的不是偶尔一笔，而是长期、大额、无说明。你现在要做的是把私户流水按性质分出来：货款、借款、垫付、报销。分不清性质，就解释不清风险。需要分类表，私信我：私户。",
         "subs": ["私户收款一定有问题吗？", "别先下结论，先分类型", "货款长期进私卡：高风险", "老板临时垫款：要说明", "亲友临时代收：最说不清", "长期、大额、无说明才危险", "先分货款、借款、垫付、报销", "私信：私户"],
     },
     {
         "name": "多店铺多主体",
+        "script": "scripts/2026-07-07_13f24bab427f_多店铺多主体.md",
         "slug": "duodianpu_duozhuti",
         "task": "wyz_20260708_duodianpu_duozhuti",
         "idx": "03",
@@ -300,7 +320,6 @@ ITEMS = [
         "keyword": "多店铺",
         "hook": "店多不可怕，钱混才可怕",
         "palette": {"base": (10, 19, 34), "accent": (59, 130, 246), "accent2": (239, 68, 68)},
-        "voice": "如果你同时有几个店铺、几个主体，最危险的不是店多，而是钱混在一起。比如 A 店铺挂的是个体户，B 店铺挂的是公司，但货款都进同一张个人卡。再比如订单是这个主体卖的，发票却让另一个主体开。账面上看好像都是你自己的生意，但税务看的是，订单属于谁，钱进了谁，票是谁开的，成本又落在哪个主体。这四件事对不上，后面解释收入、成本、利润都会很麻烦。所以多店铺老板一定要做一张关系图。每个店铺对应哪个主体，哪个收款账户，哪个开票主体，哪个成本归集口径。先把关系画清楚，再谈怎么节税。关系都乱，方案越多，风险越多。需要关系图模板，私信我：多店铺。",
         "subs": ["店多不可怕，钱混才可怕", "两个店，一张私卡", "订单和发票错位", "税务看四件事", "订单归属", "收款账户", "开票主体", "成本归集", "先画关系图", "私信：多店铺"],
         "min_duration": 44,
     },
@@ -309,5 +328,6 @@ ITEMS = [
 
 if __name__ == "__main__":
     for item in ITEMS:
+        item = load_script_config(item)
         final, dur = render_video(item)
         print(f"{final} {dur:.2f}s")

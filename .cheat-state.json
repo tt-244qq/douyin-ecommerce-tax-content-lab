@@ -44,7 +44,10 @@
     "started_at": "2026-07-07T21:32:34+08:00",
     "rubric_version": "v0",
     "basis": "pre_shoot",
-    "self_scored": true
+    "self_scored": true,
+    "type": "prediction",
+    "file": "predictions/2026-07-07_13f24bab427f_多店铺多主体.md"
   },
-  "initialized_at": "2026-07-06T23:02:46+08:00"
+  "initialized_at": "2026-07-06T23:02:46+08:00",
+  "calibration_samples_at_last_bump": 0
 }

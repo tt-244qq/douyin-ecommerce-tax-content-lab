@@ -2,6 +2,7 @@
 
 > 这是 `/cheat-init` 在你的项目根创建的速查文档。完整规范在 cheat-on-content 的 `SKILL.md` 和 `shared-references/`。
 > 本文件给"忘了下次该说什么"的时候用——不需要从头读完。
+> 项目级保护规则见 `项目提示词.md`。后续 agent 必须先遵守该文件，再执行本工作流。
 
 ---
 
@@ -45,6 +46,12 @@ T+3 天 → /cheat-retro videos/<日期>_<id>_<short>/
 ---
 
 ## 五个阶段对应触发词
+
+### ⓪ Skill 更新
+
+| 想做什么 | 触发词 | 规则 |
+|---|---|---|
+| 检查并更新 cheat-on-content | "更新这个 skill" / "检查 cheat-on-content 是否更新" | 按 `项目提示词.md` 的 `Skill 更新策略` 执行；只做增量更新，不重跑 init，不覆盖历史数据 |
 
 ### ① 选题阶段
 
