@@ -129,7 +129,7 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier1
 - **read_status**: rough_read
-- **script**: 待生成
+- **script**: scripts/2026-07-10_e777010db6fe_无货源电商证据链.md
 - **predictions_file**: 待预测
 - **composite (v0)**: 7.00 — ER=4 HP=4 QL=4 NA=4 AB=4 SR=3 SAT=2
 - **note**: 可和“无票成本”形成内容系列，但更偏证据链和业务真实性。建议私信关键词“证据链”。
@@ -157,12 +157,26 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier2
 - **read_status**: rough_read
-- **script**: 待生成
+- **script**: scripts/2026-07-10_9dc9207f5a2d_电商代账前五问.md
 - **predictions_file**: 待预测
 - **composite (v0)**: 6.57 — ER=3 HP=4 QL=4 NA=4 AB=4 SR=3 SAT=1
 - **note**: 转化导向强，但容易显得像广告。适合放在第 2 批后段。建议私信关键词“代账”。
 
 > 重点不要贬低同行，而是告诉老板“电商代账和普通代账不是一回事”。
+
+### [tier1] 平台扣点和技术服务费别只按到账金额报
+
+- **id**: 5feca26a0ebb
+- **source**: seed:manual-2026-07-10
+- **snapshot_at**: 2026-07-10
+- **tier**: tier1
+- **read_status**: rough_read
+- **script**: scripts/2026-07-10_5feca26a0ebb_平台扣点技术服务费.md
+- **predictions_file**: 待预测
+- **composite (v0)**: 7.00 — ER=4 HP=5 QL=4 NA=4 AB=4 SR=2 SAT=2
+- **note**: 承接平台流水、自查、收入确认系列，适合提醒老板不要只看银行卡到账。建议私信关键词“扣点”。
+
+> 把平台成交、扣点、到账、申报四个数对齐，能让老板快速意识到收入口径风险。
 
 ---
 
