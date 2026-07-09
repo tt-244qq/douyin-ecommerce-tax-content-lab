@@ -87,8 +87,8 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier1
 - **read_status**: rough_read
-- **script**: 待生成
-- **predictions_file**: 待预测
+- **script**: scripts/2026-07-09_8d7d9f2c287b_达人佣金推广费.md
+- **predictions_file**: predictions/2026-07-09_8d7d9f2c287b_达人佣金推广费.md
 - **composite (v0)**: 7.43 — ER=4 HP=5 QL=4 NA=4 AB=4 SR=3 SAT=2
 - **note**: 和无票成本形成系列关联，但切到达人/推广场景，适合电商老板自我代入。建议私信关键词“佣金”。
 
@@ -101,8 +101,8 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier1
 - **read_status**: rough_read
-- **script**: 待生成
-- **predictions_file**: 待预测
+- **script**: scripts/2026-07-09_716d936cffa6_退款补贴优惠券收入.md
+- **predictions_file**: predictions/2026-07-09_716d936cffa6_退款补贴优惠券收入.md
 - **composite (v0)**: 7.14 — ER=3 HP=5 QL=5 NA=4 AB=4 SR=3 SAT=1
 - **note**: 适合做“很多老板算错收入”的专业型内容，转化质量可能高。建议私信关键词“收入”。
 
@@ -115,8 +115,8 @@
 - **snapshot_at**: 2026-07-07
 - **tier**: tier1
 - **read_status**: rough_read
-- **script**: 待生成
-- **predictions_file**: 待预测
+- **script**: scripts/2026-07-09_b83bc5ff244a_五百万一般纳税人.md
+- **predictions_file**: predictions/2026-07-09_b83bc5ff244a_五百万一般纳税人.md
 - **composite (v0)**: 6.86 — ER=3 HP=5 QL=4 NA=4 AB=4 SR=2 SAT=2
 - **note**: 对已经起量的商家更精准，泛流量可能弱于私户/无票，但客户质量更高。建议私信关键词“五百万”。
 

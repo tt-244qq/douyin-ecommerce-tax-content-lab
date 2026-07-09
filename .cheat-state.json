@@ -28,8 +28,8 @@
   "last_retro_at": null,
   "last_trends_run_at": null,
   "last_trends_added_count": 0,
-  "last_prediction_self_scored": false,
-  "last_self_scored_at": null,
+  "last_prediction_self_scored": true,
+  "last_self_scored_at": "2026-07-09T00:00:00+08:00",
   "consecutive_directional_errors": [],
   "pending_retros": [
     "predictions/2026-07-06_c94c64246130_平台流水自查.md",
@@ -38,18 +38,27 @@
   ],
   "shoots": [],
   "in_progress_session": {
-    "prediction_file": "predictions/2026-07-07_13f24bab427f_多店铺多主体.md",
-    "script_path": "scripts/2026-07-07_13f24bab427f_多店铺多主体.md",
-    "video_folder": "videos/2026-07-07_13f24bab427f_多店铺多主体/",
-    "started_at": "2026-07-07T21:32:34+08:00",
+    "prediction_files": [
+      "predictions/2026-07-09_8d7d9f2c287b_达人佣金推广费.md",
+      "predictions/2026-07-09_716d936cffa6_退款补贴优惠券收入.md",
+      "predictions/2026-07-09_b83bc5ff244a_五百万一般纳税人.md"
+    ],
+    "script_paths": [
+      "scripts/2026-07-09_8d7d9f2c287b_达人佣金推广费.md",
+      "scripts/2026-07-09_716d936cffa6_退款补贴优惠券收入.md",
+      "scripts/2026-07-09_b83bc5ff244a_五百万一般纳税人.md"
+    ],
+    "video_outputs": [
+      "作品生成/视频成片/达人佣金推广费_premium.mp4",
+      "作品生成/视频成片/退款补贴优惠券收入_premium.mp4",
+      "作品生成/视频成片/五百万一般纳税人_premium.mp4"
+    ],
+    "started_at": "2026-07-09T00:00:00+08:00",
     "rubric_version": "v0",
     "basis": "pre_shoot",
-    "self_scored": false,
-    "type": "prediction",
-    "file": "predictions/2026-07-07_13f24bab427f_多店铺多主体.md",
-    "supplemental_blind_audited": true,
-    "supplemental_blind_audited_at": "2026-07-08T00:00:00+08:00",
-    "supplemental_blind_audited_by": "multi_agent_v1_isolated_blind"
+    "self_scored": true,
+    "type": "daily_batch_prediction_and_video",
+    "count": 3
   },
   "initialized_at": "2026-07-06T23:02:46+08:00",
   "calibration_samples_at_last_bump": 0,
