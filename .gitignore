@@ -23,6 +23,9 @@
 .debug/
 node_modules/
 
+# 生成脚本的中间视频底片；最终交付文件仍放在 作品生成/视频成片/ 入库。
+作品生成/素材片段/*_premium_raw.mp4
+
 # ── Claude Code 本地配置（含机器相关路径 / 个人 permission）──
 .claude/
 
