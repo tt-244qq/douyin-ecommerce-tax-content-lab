@@ -4,7 +4,7 @@
 
 ---
 
-**最近更新**: 2026-07-09T21:55:00+08:00
+**最近更新**: 2026-07-09T22:28:38+08:00
 **模式**: cold-start
 **内容形态**: tutorial-builder（抖音短视频专业知识讲解）
 **当前 rubric**: v0
@@ -77,7 +77,7 @@
 
 - `calibration_samples`: 0，仍处于 cold-start。
 - `hooks_installed`: ❌（Codex 当前按人工纪律执行预测不可改）
-- `benchmark_status`: pending（仍建议后续导入对标账号）
+- `benchmark_status`: imported（账号级参考已导入；逐条视频样本仍为 0）
 - `rubric_form_mismatch`: true（当前内容形态不是内置观点视频，前几篇预测会更不准）
 - `data_layer`: markdown（样本远低于 SQLite 升级门槛）
 
