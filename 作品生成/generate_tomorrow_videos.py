@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path("/mnt/d/wtf1124/wyz")
 MPT = Path("/mnt/d/wtf1124/project/MoneyPrinterTurbo")
 OUT_DIR = ROOT / "作品生成" / "视频成片"
-ASSET_DIR = ROOT / "作品生成" / "素材片段"
+TEMP_DIR = ROOT / "作品生成" / "临时产物"
 TASK_DIR = MPT / "storage" / "tasks"
 FONT_BOLD = MPT / "resource" / "fonts" / "MicrosoftYaHeiBold.ttc"
 FONT_NORMAL = MPT / "resource" / "fonts" / "MicrosoftYaHeiNormal.ttc"
@@ -118,13 +118,14 @@ def bg(draw, t, palette):
     return img.convert("RGB")
 
 
-def draw_frame_shell(img, idx, total, keyword):
+def draw_frame_shell(img, idx, total, keyword, progress):
     d = ImageDraw.Draw(img, "RGBA")
     rounded(d, (42, 44, 1038, 118), 20, (5, 10, 22, 210), (255, 255, 255, 30), 1)
     d.text((66, 68), BRAND, font=F["brand"], fill=(255, 255, 255, 245))
     d.text((888, 68), f"{idx}/{total}", font=F["small"], fill=(148, 163, 184, 255))
-    rounded(d, (62, 1740, 1018, 1848), 28, (5, 10, 22, 220), (255, 255, 255, 42), 1)
-    d.text((98, 1772), f"需要自查工具，私信：{keyword}", font=F["body2"], fill=(255, 255, 255, 255))
+    if progress >= 0.88:
+        rounded(d, (62, 1740, 1018, 1848), 28, (5, 10, 22, 220), (255, 255, 255, 42), 1)
+        d.text((98, 1772), f"需要自查工具，私信：{keyword}", font=F["body2"], fill=(255, 255, 255, 255))
     return d
 
 
@@ -340,7 +341,7 @@ def create_bgm(path, dur):
 
 def render_video(item):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    ASSET_DIR.mkdir(parents=True, exist_ok=True)
+    TEMP_DIR.mkdir(parents=True, exist_ok=True)
     task = TASK_DIR / item["task"]
     task.mkdir(parents=True, exist_ok=True)
     audio = task / "audio.mp3"
@@ -350,7 +351,7 @@ def render_video(item):
     bgm = task / "bgm.wav"
     if item.get("bgm") and not bgm.exists():
         create_bgm(bgm, dur)
-    raw = ASSET_DIR / f"{item['slug']}_premium_raw.mp4"
+    raw = TEMP_DIR / f"{item['slug']}_premium_raw.mp4"
     final = OUT_DIR / f"{item['name']}_premium.mp4"
     writer = imageio.get_writer(
         str(raw),
@@ -365,7 +366,7 @@ def render_video(item):
         t = n / FPS
         p = t / dur
         img = bg(None, t, item["palette"])
-        d = draw_frame_shell(img, item["idx"], item.get("total", 3), item["keyword"])
+        d = draw_frame_shell(img, item["idx"], item.get("total", 3), item["keyword"], p)
         rounded(d, (62, 154, 1018, 244), 24, (*item["palette"]["accent"], 230))
         center_text(d, (62, 154, 1018, 244), item["hook"], F["tag"])
         if item["kind"] == "report":

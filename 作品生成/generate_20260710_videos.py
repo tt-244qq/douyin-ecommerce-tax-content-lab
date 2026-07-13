@@ -15,7 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path("/mnt/d/wtf1124/wyz")
 MPT = Path("/mnt/d/wtf1124/project/MoneyPrinterTurbo")
 OUT_DIR = ROOT / "作品生成" / "视频成片"
-ASSET_DIR = ROOT / "作品生成" / "素材片段"
+TEMP_DIR = ROOT / "作品生成" / "临时产物"
 TASK_DIR = MPT / "storage" / "tasks"
 FONT_BOLD = MPT / "resource" / "fonts" / "MicrosoftYaHeiBold.ttc"
 FONT_NORMAL = MPT / "resource" / "fonts" / "MicrosoftYaHeiNormal.ttc"
@@ -118,8 +118,9 @@ def shell(img, item, p):
     d.text((870, 70), "2026-07-10", font=F["small"], fill=(156, 163, 175, 255))
     rounded(d, (62, 154, 1018, 246), 24, (*item["accent"], 230))
     center_text(d, (62, 154, 1018, 246), item["hook"], F["tag"])
-    rounded(d, (62, 1740, 1018, 1848), 28, (3, 8, 18, 225), (255, 255, 255, 40), 1)
-    d.text((98, 1772), f"需要自查表，私信：{item['keyword']}", font=F["body"], fill=(255, 255, 255))
+    if p >= 0.88:
+        rounded(d, (62, 1740, 1018, 1848), 28, (3, 8, 18, 225), (255, 255, 255, 40), 1)
+        d.text((98, 1772), f"需要自查表，私信：{item['keyword']}", font=F["body"], fill=(255, 255, 255))
     return d
 
 
@@ -244,7 +245,7 @@ def bgm(path, dur):
 
 def render(item):
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    ASSET_DIR.mkdir(parents=True, exist_ok=True)
+    TEMP_DIR.mkdir(parents=True, exist_ok=True)
     task = TASK_DIR / item["task"]
     task.mkdir(parents=True, exist_ok=True)
     audio = task / "audio.mp3"
@@ -254,7 +255,7 @@ def render(item):
     bgm_path = task / "bgm.wav"
     if not bgm_path.exists():
         bgm(bgm_path, dur)
-    raw = ASSET_DIR / f"{item['slug']}_20260710_raw.mp4"
+    raw = TEMP_DIR / f"{item['slug']}_20260710_raw.mp4"
     final = OUT_DIR / f"{item['name']}_20260710.mp4"
     writer = imageio.get_writer(str(raw), fps=FPS, codec="libx264", quality=8, pixelformat="yuv420p", macro_block_size=1)
     frames = int(math.ceil(dur * FPS))
