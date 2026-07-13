@@ -14,7 +14,7 @@
   "data_collection": "manual",
   "pool_status": "markdown",
   "data_layer": "markdown",
-  "hooks_installed": false,
+  "hooks_installed": true,
   "enabled_trend_sources": [
     "manual-paste"
   ],
@@ -46,6 +46,6 @@
   "in_progress_session": null,
   "initialized_at": "2026-07-06T23:02:46+08:00",
   "calibration_samples_at_last_bump": 0,
-  "last_blind_audit_at": "2026-07-08T00:00:00+08:00",
-  "last_blind_audit_by": "multi_agent_v1_isolated_blind"
+  "last_blind_audit_at": "2026-07-13T09:49:36+08:00",
+  "last_blind_audit_by": "multi_agent_v1_isolated_blind_draft"
 }

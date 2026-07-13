@@ -16,6 +16,9 @@
 .cheat-secrets.json
 .项目隐私/
 
+# 本地人物与声音基准素材包含个人生物特征，只在本机生成链路中使用。
+作品生成/素材片段/我的*
+
 # ── 本地缓存与生成物 ──
 # .cheat-cache = 使用日志/热点去重缓存；.cheat-hooks = init 生成的 hook 副本；.debug = adapter 调试输出
 .cheat-cache/
@@ -23,8 +26,8 @@
 .debug/
 node_modules/
 
-# 生成脚本的中间视频底片；最终交付文件仍放在 作品生成/视频成片/ 入库。
-作品生成/素材片段/*_premium_raw.mp4
+# 生成脚本的可再生中间产物；核心人物和声音素材仍放在 作品生成/素材片段/。
+作品生成/临时产物/
 
 # ── Claude Code 本地配置（含机器相关路径 / 个人 permission）──
 .claude/

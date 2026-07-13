@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "analyzed_at": "2026-07-13T09:38:00+08:00",
+  "policy": {
+    "core_asset_dir": "作品生成/素材片段",
+    "generated_temp_dir": "作品生成/临时产物",
+    "privacy": "local-only; ignored by git",
+    "reuse_rule": "Read this manifest before probing source media again. Re-probe only when sha256 changes."
+  },
+  "assets": [
+    {
+      "path": "作品生成/素材片段/我的视频.mp4",
+      "sha256": "21c5fa336e2afb8901859a78e3a03bb7455855ccce1153b9eb0f31178dc87350",
+      "size_bytes": 9901123,
+      "role": "primary_presenter_and_lip_sync_base",
+      "video": {
+        "codec": "hevc_main",
+        "width": 720,
+        "height": 1280,
+        "fps": 30.0,
+        "duration_seconds": 65.63,
+        "pixel_format": "yuv420p",
+        "orientation": "portrait_9_16"
+      },
+      "audio": {
+        "codec": "aac_lc",
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "mean_volume_db": -24.1,
+        "max_volume_db": -1.8
+      },
+      "visual_profile": "Frontal seated presenter, stable camera, light wall background, limited but natural hand and head movement."
+    },
+    {
+      "path": "作品生成/素材片段/我的声音.m4a",
+      "sha256": "eb56cefd5f71980fe441a2ec21358df4ac2018a905c235c7862dd93c2e7efd03",
+      "size_bytes": 1160482,
+      "role": "voice_identity_reference",
+      "audio": {
+        "codec": "aac_lc",
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "duration_seconds": 61.78,
+        "bitrate_kbps": 148,
+        "mean_volume_db": -20.0,
+        "max_volume_db": -0.7,
+        "silence_profile": "Nine natural pauses of 0.53-0.90 seconds at -40 dB threshold."
+      },
+      "sync": {
+        "matches_primary_video": false,
+        "analysis": "Envelope correlation was too low; do not replace primary video audio directly."
+      }
+    },
+    {
+      "path": "作品生成/素材片段/我的视频_声音.mp4",
+      "sha256": "689cf6bfbccac2db5ca2ee0562b1eeae4a4b3de6118177c8170ab2ffadf23f38",
+      "size_bytes": 13857814,
+      "role": "high_resolution_auxiliary_presenter_clip",
+      "video": {
+        "codec": "h264_high",
+        "width": 1080,
+        "height": 1920,
+        "fps": 30.0,
+        "duration_seconds": 12.05,
+        "pixel_format": "yuv420p",
+        "orientation": "portrait_9_16"
+      },
+      "audio": {
+        "codec": "aac_lc",
+        "sample_rate_hz": 48000,
+        "channels": 2,
+        "mean_volume_db": -29.1,
+        "max_volume_db": -11.4
+      }
+    }
+  ]
+}
